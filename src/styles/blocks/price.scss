@@ -1,0 +1,124 @@
+.price__item {
+  padding: 58px 40px 60px;
+  background: #ffffff;
+  aspect-ratio: 360/448;
+
+  border: 7px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    border: 7px solid #87ceeb;
+    border-image: linear-gradient(to left top, #00359f, #d10a42);
+    border-image-slice: 1;
+
+    & .price__button {
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      color: #ffffff;
+      outline: none;
+      border: none;
+    }
+  }
+
+  @media (max-width: $vp-1199) {
+    gap: 35px;
+    justify-content: start;
+    aspect-ratio: 442/448;
+  }
+
+  @media (max-width: $vp-767) {
+    justify-content: space-between;
+    aspect-ratio: 295/390;
+    padding: 45px 35px 47px;
+    gap: 22px;
+  }
+}
+
+.price__title {
+  @include Roboto_Condensed(700, 26px, 29px);
+  margin: 0;
+  margin-bottom: 7px;
+  color: #102654;
+  text-align: center;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $vp-767) {
+    @include Roboto_Condensed(700, 22px, 24px);
+    margin-bottom: 8px;
+  }
+}
+
+.price__info {
+  @include Roboto_Condensed(400, 16px, 24px);
+  display: block;
+  text-align: center;
+  color: #495a7d;
+}
+
+.price__number-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 31px;
+}
+
+.price__number-shadow {
+  @include Roboto_Condensed(700, 100px, 150px);
+  color: #e8e8e8;
+  opacity: 0.48;
+  position: absolute;
+  top: -53px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: $vp-767) {
+    @include Roboto_Condensed(700, 80px, 120px);
+    top: -44px;
+  }
+}
+
+.price__number {
+  @include Roboto_Condensed(700, 60px, 90px);
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #103aae;
+  text-align: center;
+
+  @media (max-width: $vp-767) {
+    @include Roboto_Condensed(700, 48px, 72px);
+  }
+}
+
+.price__number-icon {
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $vp-767) {
+    width: 24px;
+    height: 33px;
+  }
+}
+
+.price__button {
+  width: 206px;
+  padding: 24px;
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.price__button--border {
+  outline: 2px solid #102654;
+  color: #102654;
+  border: none;
+}

@@ -1,0 +1,29 @@
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-slide {
+  min-width: 0;
+  width: 100%;
+}
+
+.swiper-button-next::after {
+  font-size: 30px;
+
+  @media (max-width: $vp-767) {
+    font-size: 20px;
+  }
+}
+
+.swiper-button-prev::after {
+  font-size: 30px;
+
+  @media (max-width: $vp-767) {
+    font-size: 20px;
+  }
+}

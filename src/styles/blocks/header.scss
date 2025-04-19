@@ -1,0 +1,277 @@
+.header {
+  background: conic-gradient(
+    from 130.31deg at 16.03% 39.06%,
+    #b80027 -46.69deg,
+    #003d85 32.24deg,
+    #b80027 313.31deg,
+    #003d85 392.24deg
+  );
+  color: #ffffff;
+
+  @media (max-width: $vp-1199) {
+    background: conic-gradient(
+      from 139.4deg at 20.7% 35.74%,
+      #b80027 -46.69deg,
+      #003d85 32.24deg,
+      #b80027 313.31deg,
+      #003d85 392.24deg
+    );
+  }
+
+  @media (max-width: $vp-767) {
+    background: conic-gradient(
+      from 171.43deg at 35.31% 34.22%,
+      #b80027 -46.69deg,
+      #003d85 32.24deg,
+      #b80027 313.31deg,
+      #003d85 392.24deg
+    );
+  }
+}
+
+.header__container {
+  @media (max-width: $vp-1199) {
+    padding-bottom: 65px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-bottom: 39px;
+  }
+}
+
+.header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+  padding: 30px 0 25px;
+
+  @media (max-width: $vp-1199) {
+    padding-top: 36px;
+    padding-bottom: 17px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 15px;
+  }
+}
+
+.header__list {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 20px 45px;
+}
+
+.header__item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  cursor: default;
+}
+
+.header-icon {
+  @media (max-width: $vp-1199) {
+    width: 82px;
+    height: 26px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 69px;
+    height: 24px;
+  }
+}
+
+.header__phone-link {
+  @include Alumni_Sans(26px, 31px);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $vp-1199) {
+    @include Alumni_Sans(24px, 29px);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: $vp-767) {
+    @include Alumni_Sans(20px, 24px);
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  top: -50px;
+
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 64px;
+
+  @media (max-width: $vp-1199) {
+    top: 0;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 0;
+  }
+}
+
+.header__sup-text {
+  @include Alumni_Sans(48px, 58px);
+  letter-spacing: 0.03em;
+  padding-right: 50px;
+  margin: 0;
+
+  @media (max-width: $vp-1199) {
+    @include Alumni_Sans(34px, 41px);
+    padding-right: 3px;
+  }
+
+  @media (max-width: $vp-767) {
+    @include Alumni_Sans(28px, 34px);
+    padding-right: 3px;
+  }
+}
+
+.header__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 115px 0 0 18px;
+
+  @media (max-width: $vp-1199) {
+    margin: 48px 0 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    align-items: flex-end;
+    margin-top: 53px;
+  }
+}
+
+.header__text-wrapper {
+  display: grid;
+  grid-template-columns: 113px min-content;
+  // grid-auto-rows: auto;
+  grid-template-rows: minmax(200px, auto) auto;
+  grid-template-areas:
+    "text title"
+    "text button";
+  align-items: start;
+  gap: 19px;
+
+  @media (max-width: $vp-1199) {
+    gap: 24px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-areas:
+    "text title"
+    "button button";
+    gap: 0;
+    width: 100%;
+  }
+}
+
+.header__sub-text {
+  @include Roboto_Condensed(400, 14px, 21px);
+  // margin: auto 0 33px;
+  margin-top: 134px;
+grid-area: text;
+align-self: start;
+  text-align: right;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: 19px;
+    margin-top: 97px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin: 0;
+    margin-top: 91px;
+  }
+}
+
+// .header__title-wrapper {
+// display: flex;
+// flex-direction: column;
+
+// }
+
+.header__title {
+  @include Alumni_Sans(92px, 110px);
+  grid-area: title;
+  margin: 14px 0 0;
+  text-align: right;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-1199) {
+    @include Alumni_Sans(72px, 86px);
+    text-transform: none;
+    margin-top: 8px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 13px;
+    margin-left: -8px;
+  }
+}
+
+.header__button {
+  grid-area: button;
+  width: 230px;
+  margin-top: 29px;
+  margin-left: 13px;
+  padding: 19px;
+
+  &:hover {
+    background-color: #b80027;
+  }
+
+  &:active {
+    background-color: #003d85;
+  }
+
+  @media (max-width: $vp-1199) {
+    padding: 19px;
+    width: 187px;
+    margin-top: 13px;
+    margin-left: 2px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    margin-top: 23px;
+    margin-left: 0;
+  }
+}
+
+.header__image {
+  object-fit: cover;
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
