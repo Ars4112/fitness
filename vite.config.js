@@ -6,8 +6,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   root: path.resolve(__dirname, 'src'),
+  base: '/fitness/',
   build: {
-    outDir: '../dist'
+    outDir: '../dist',
+    emptyOutDir: true,
   },
   css: {
     preprocessorOptions: {
